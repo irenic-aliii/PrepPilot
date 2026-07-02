@@ -7,7 +7,12 @@ import json
 
 # Load API key from .env
 
-app = FastAPI()
+app = FastAPI(
+    title="PrepPilot API",
+    docs_url="/docs",
+    redoc_url="/redoc",
+    openapi_url="/openapi.json"
+)
 
 app.add_middleware(
     CORSMiddleware,
