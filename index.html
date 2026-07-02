@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PrepPilot AI</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.png">
+<meta
+name="description"
+content="PrepPilot AI is an AI-powered study planner that generates study schedules, quizzes, tracks progress and helps students prepare smarter."
+>
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark">P</span>
+        <span class="brand-name">PrepPilot</span>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-page="home">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-9"/><path d="M9.5 20v-6h5v6"/></svg>
+          Home
+        </button>
+        <button class="nav-item" data-page="planner">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="16" rx="2.5"/><path d="M3.5 9h17"/><path d="M8 3v3"/><path d="M16 3v3"/><path d="M7.5 13h2.5"/><path d="M7.5 16.5h2.5"/><path d="M14 13h2.5"/></svg>
+          Planner
+        </button>
+        <button class="nav-item" data-page="topics">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V6a2 2 0 0 1 2-2h12.5v15.5"/><path d="M4 19.5A2 2 0 0 1 6 17.5h12.5"/><path d="M8 8h7"/><path d="M8 11.3h7"/></svg>
+          Topics
+        </button>
+        <button class="nav-item" data-page="quiz">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.1 9a3 3 0 1 1 4.4 2.6c-.9.5-1.5 1-1.5 2.4"/><circle cx="12" cy="17.7" r=".4" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="9.3"/></svg>
+          Quiz
+        </button>
+        <button class="nav-item" data-page="progress">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10.5"/><path d="M12 20V4"/><path d="M20 20v-7"/><path d="M3 20h18"/></svg>
+          Progress
+        </button>
+        <button class="nav-item" data-page="settings">
+          <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 13.5a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V20a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H4a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3h.1a1.7 1.7 0 0 0 1-1.5V4a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.5h.1a1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9v.1a1.7 1.7 0 0 0 1.5 1H20a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.5 1z"/></svg>
+          Settings
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <p class="footer-credit">PrepPilot AI</p>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+
+      <section id="home" class="page active">
+        <header class="page-header">
+          <h1 id="home-greeting">Welcome back, Student</h1>
+          <p>Your personalized AI study dashboard.</p>
+        </header>
+        <div class="hero-card">
+          <div>
+    <p class="muted">📅 Exam Countdown</p>
+    <strong id="exam-countdown">Set your exam date</strong>
+    <span class="motivation-line">
+        Small progress every day leads to big success.
+    </span>
+</div>
+          <a id="home-campus-link" class="campus-link" href="https://campuscopilot.streamlit.app/" target="_blank" rel="noopener noreferrer">
+            🤖 Need help? Open CampusCopilot AI
+          </a>
+        </div>
+        <div class="card-grid">
+          <div class="card placeholder-card focus-card">
+            <h3>Today's Focus</h3>
+            <p id="today-focus" class="muted">Add your subjects and topics to get a useful focus suggestion.</p>
+          </div>
+          <div class="card placeholder-card">
+            <h3>Due for Revision</h3>
+            <div id="home-revision-list" class="mini-list"></div>
+          </div>
+          <div class="card placeholder-card">
+    <h3>Study Streak 🔥</h3>
+    <p class="muted">0 Day Streak</p>
+</div>
+        </div>
+      </section>
+
+      <section id="planner" class="page">
+        <header class="page-header">
+          <h1>Planner</h1>
+          <p>Plan your study sessions here.</p>
+        </header>
+        <div class="card planner-actions">
+          <div>
+            <h3>AI Study Timetable</h3>
+            <p class="muted">
+Generate a personalized AI study timetable based on your subjects, weak areas, and available study hours.
+</p>
+          </div>
+          <div class="action-stack">
+            <button id="generate-plan-btn" type="button" class="btn-primary">✨ Generate AI Study Plan</button>
+            <a id="planner-campus-link" class="btn-secondary link-button" href="https://campuscopilot.streamlit.app/" target="_blank" rel="noopener noreferrer">🤖 Ask CampusCopilot AI</a>
+          </div>
+        </div>
+        <div id="planner-loading" class="loading-card" hidden>
+          <span class="spinner"></span>
+          <span>Generating your 7-day timetable...</span>
+        </div>
+        <div id="plan-output" class="plan-output"></div>
+        <div id="plan-error" class="notice error" hidden></div>
+        <div id="plan-empty" class="card placeholder-card">
+          <p class="muted">Save your profile and API key, then generate a personalized plan.</p>
+        </div>
+      </section>
+
+      <section id="topics" class="page">
+        <header class="page-header">
+          <h1>Topics</h1>
+          <p>Organize subjects and topics here.</p>
+        </header>
+        <div class="card">
+          <form id="topic-form" class="topic-form">
+            <div class="form-group">
+              <label for="topic-name">Topic name</label>
+              <input type="text" id="topic-name" placeholder="e.g. Binary Trees" autocomplete="off" required>
+            </div>
+            <div class="form-group">
+              <label for="topic-subject">Subject</label>
+              <select id="topic-subject" required></select>
+            </div>
+            <div class="form-group">
+              <label for="topic-difficulty">Difficulty</label>
+              <select id="topic-difficulty">
+                <option value="medium">Medium</option>
+                <option value="easy">Easy</option>
+                <option value="hard">Hard</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary">Add topic</button>
+          </form>
+        </div>
+        <div class="topic-columns">
+          <div class="card">
+            <h3>Incomplete</h3>
+            <div id="incomplete-topics" class="topic-list"></div>
+          </div>
+          <div class="card">
+            <h3>Completed</h3>
+            <div id="completed-topics" class="topic-list"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="quiz" class="page">
+        <header class="page-header">
+          <h1>Quiz</h1>
+          <p>
+Generate an AI-powered quiz to evaluate your understanding of any topic.
+</p>
+        </header>
+        <div class="card quiz-setup">
+          <div class="form-group">
+            <label for="quiz-topic">Choose topic</label>
+            <select id="quiz-topic"></select>
+          </div>
+          <div class="action-stack">
+            <button id="generate-quiz-btn" type="button" class="btn-primary">🧠 Generate AI Quiz</button>
+            <a id="quiz-campus-link" class="btn-secondary link-button" href="https://campuscopilot.streamlit.app/" target="_blank" rel="noopener noreferrer">🤖 Need help? Ask CampusCopilot AI</a>
+          </div>
+        </div>
+        <div id="quiz-loading" class="loading-card" hidden>
+          <span class="spinner"></span>
+          <span>Generating quiz questions...</span>
+        </div>
+        <div id="quiz-error" class="notice error" hidden></div>
+        <div id="quiz-card" class="card quiz-card" hidden>
+          <p id="quiz-counter" class="muted"></p>
+          <h3 id="quiz-question"></h3>
+          <div id="quiz-options" class="quiz-options"></div>
+          <div id="quiz-feedback" class="quiz-feedback" hidden></div>
+          <button id="next-question-btn" type="button" class="btn-primary" hidden>Next Question</button>
+        </div>
+      </section>
+
+      <section id="progress" class="page">
+        <header class="page-header">
+          <h1>Progress</h1>
+          <p>Track how far you've come.</p>
+        </header>
+        <div class="card progress-summary-card">
+          <p class="muted">Overall completion</p>
+          <strong id="overall-progress-number">0%</strong>
+          <div class="progress-bar"><span id="overall-progress-bar"></span></div>
+        </div>
+        <div class="card">
+          <h3>Subject Progress</h3>
+          <div id="subject-progress-list" class="subject-progress-list"></div>
+        </div>
+      </section>
+
+      <section id="settings" class="page">
+        <header class="page-header">
+          <h1>Profile</h1>
+          <p>
+Complete your profile so PrepPilot AI can generate personalized study plans and quizzes.
+</p>
+        </header>
+
+        <div class="card">
+          <form id="profile-form" class="profile-form">
+
+            <div class="form-group">
+              <label for="student-name">Name</label>
+              <input type="text" id="student-name" placeholder="e.g. Alex Johnson" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+              <label for="student-subjects">Subjects <span class="hint">(comma separated)</span></label>
+              <input type="text" id="student-subjects" placeholder="e.g. Maths, Physics, DSA" autocomplete="off">
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="exam-date">Exam date</label>
+                <input type="date" id="exam-date">
+              </div>
+
+              <div class="form-group">
+                <label for="study-hours">Hours/day you can study</label>
+                <input type="number" id="study-hours" min="0" max="24" step="0.5" placeholder="e.g. 3">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="weak-subject">Subjects you find weak <span class="hint">(comma separated)</span></label>
+              <input type="text" id="weak-subject" placeholder="e.g. DSA, Physics" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+          
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Save profile</button>
+              <button type="button" id="clear-data-btn" class="btn-clear">Clear data</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <div id="toast" class="toast">Profile saved</div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
