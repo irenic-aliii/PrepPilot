@@ -3,7 +3,7 @@
 
 const STORAGE_KEY = "preppilot_data";
 const REVISION_STEPS = [1, 2, 4, 8];
-const API_BASE_URL = "http://127.0.0.1:8000";
+const API_BASE_URL = "https://preppilot-backend-1exl.onrender.com";
 
 let quizState = {
   questions: [],
@@ -189,7 +189,7 @@ if (!form) return;
   if (clearButton) {
     clearButton.addEventListener("click", () => {
       const confirmed = confirm(
-        "This will permanently delete your profile, topics, plans, quizzes, and API key from this browser. This cannot be undone. Continue?"
+        "This will permanently delete your profile, topics, plans, and quizzes from this browser. This cannot be undone. Continue?"
       );
       if (!confirmed) return;
 
