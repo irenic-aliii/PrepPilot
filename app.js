@@ -3,7 +3,7 @@
 
 const STORAGE_KEY = "preppilot_data";
 const REVISION_STEPS = [1, 2, 4, 8];
-const API_BASE_URL = "https://preppilot-backend-1exl.onrender.com";
+const API_BASE_URL = "https://preppilot-backend-v2.onrender.com";
 
 let quizState = {
   questions: [],
